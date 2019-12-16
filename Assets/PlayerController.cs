@@ -3,13 +3,8 @@
 public class PlayerController : MonoBehaviour
 {
     public Rigidbody player;
-    public float forwardSpeed = 1200f;
-    public float upwardForce = 500f;
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
+    public float forwardSpeed = 200f;
+    public float upwardForce = 400f;
 
     // Update is called once per frame
     void Update()
