@@ -5,6 +5,8 @@ public class PlayerController : MonoBehaviour
     public Rigidbody player;
     public float forwardSpeed = 200f;
     public float upwardForce = 400f;
+    public int minY = -100;
+    public int maxY = 100;
 
     // Update is called once per frame
     void Update()
@@ -16,6 +18,11 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {
             player.AddForce(0, upwardForce * Time.deltaTime, 0);
+        }
+
+        if (player.transform.position.y < minY || player.transform.position.y > maxY)
+        {
+            // KILL THE PLAYER
         }
     }
 }
